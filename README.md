@@ -1,8 +1,10 @@
-Interactive Desktop Configuration for BIL Cluster
+# Interactive Desktop Configuration for BIL Cluster
 This repository contains a YAML configuration file (interactive_desktop.yml) for launching an interactive Xfce desktop environment on the Brain Image Library (BIL) cluster, designed for compute-intensive tasks such as brain imaging analysis.
-Overview
+
+##  Overview
 The YAML file defines a form-based interface for configuring a Slurm job to run an interactive desktop session on the BIL cluster. Users can specify parameters like CPU cores, memory allocation, session duration, and other Slurm options to tailor the session to their needs.
-YAML File Structure
+
+## YAML File Structure
 The configuration file includes the following key sections:
 
 Title and Cluster: Specifies the application name (Interactive Desktop) and the target cluster (bil).
@@ -29,10 +31,9 @@ bc_num_hours: Sets 1–8 hours for session duration (steps of 1, default: 1).
 bc_memory: Allocates 8–2900 GB of memory (steps of 1, default: 8).
 Other fields like bc_vnc_resolution (required), bc_queue (default: "applications"), and extra_slurm_args.
 
-
 Submit: Points to a Slurm submission script (submit/submit.yml.erb).
 
-Key Parameters
+## Key Parameters
 
 Desktop Environment: Fixed to Xfce, optimized for HPC performance.
 Number of Cores: Configurable from 4 to 64 cores to balance performance and resource usage.
@@ -41,7 +42,7 @@ Memory Allocation: Ranges from 8 GB to 2900 GB for resource-intensive applicatio
 VNC Resolution: Must be specified by the user for the desktop display.
 Extra Slurm Args: Allows additional Slurm parameters for advanced customization.
 
-Usage
+## Usage
 
 Clone this repository to your local environment or cluster.
 Ensure the BIL cluster environment supports the Slurm workload manager and Xfce desktop.
@@ -49,7 +50,7 @@ Modify the YAML file if needed (e.g., adjust defaults or constraints).
 Use the YAML configuration with a compatible job submission system (e.g., Open OnDemand) to launch the desktop session.
 Configure parameters via the form interface to allocate resources and start the session.
 
-Notes
+## Notes
 
 Ensure resource allocations (cores, memory, hours) are appropriate to avoid overloading the cluster.
 The bc_vnc_resolution field is mandatory and must be set before submission.
