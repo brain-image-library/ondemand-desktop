@@ -1,0 +1,63 @@
+title: "Interactive Desktop"
+cluster: "bil"
+description: |
+  Launches an Xfce desktop on the Brain Image Library (BIL) cluster for compute-intensive tasks like brain imaging analysis.
+form:
+  - bc_vnc_idle
+  - desktop
+  - bc_account
+  - bc_num_hours
+  - bc_num_slots
+  - bc_num_cores
+  - bc_memory
+  - node_type
+  - bc_queue
+  - bc_vnc_resolution
+  - extra_slurm_args
+  - bc_email_on_started
+attributes:
+  desktop:
+    widget: select
+    label: "Desktop Environment"
+    help: |
+      Launches the Xfce desktop environment on the BIL cluster.
+    options:
+      - ["Xfce", "xfce"]
+  bc_vnc_idle: 0
+  bc_vnc_resolution:
+    required: true
+  node_type: null
+  bc_queue: "applications"
+  bc_num_slots: "1"
+  bc_account: "null"
+  bc_num_cores:
+    widget: number_field
+    label: "Number of Cores"
+    help: |
+      Select 4 to 64 CPU cores in steps of 1 for the desktop session.
+    min: 4
+    max: 64
+    step: 1
+    value: 4
+  bc_num_hours:
+    widget: number_field
+    label: "Number of Hours"
+    help: |
+      Set the desktop session duration from 1 to 8 hours in steps of 1.
+    min: 1
+    max: 8
+    step: 1
+    value: 1
+  bc_memory:
+    widget: number_field
+    label: "Memory Allocation (GB)"
+    help: |
+      Allocate 8 to 2900 GB of memory in steps of 1 for the desktop session.
+    min: 8
+    max: 2900
+    step: 1
+    value: 8
+  extra_slurm_args:
+    label: Extra Slurm Args
+    widget: text_field
+submit: submit/submit.yml.erb

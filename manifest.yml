@@ -1,0 +1,9 @@
+---
+name: Interactive Desktop
+category: Interactive Apps
+subcategory: Servers
+role: batch_connect
+description: |
+  This app will launch an Interactive Desktop instance using on the [Brain Image Library Analysis Ecosystem].
+
+  [Brain Image Library Analysis Ecosystem]: https://www.brainimagelibrary.org
