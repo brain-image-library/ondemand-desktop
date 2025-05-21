@@ -1,5 +1,5 @@
 # Interactive Desktop Configuration for BIL Cluster
-This repository contains a YAML configuration file (interactive_desktop.yml) for launching an interactive Xfce desktop environment on the Brain Image Library (BIL) cluster, designed for compute-intensive tasks such as brain imaging analysis.
+This repository contains a YAML configuration file (form.yml) for launching an interactive Xfce desktop environment on the Brain Image Library (BIL) cluster, designed for compute-intensive tasks such as brain imaging analysis.
 
 ##  Overview
 The YAML file defines a form-based interface for configuring a Slurm job to run an interactive desktop session on the BIL cluster. Users can specify parameters like CPU cores, memory allocation, session duration, and other Slurm options to tailor the session to their needs.
